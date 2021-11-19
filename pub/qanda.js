@@ -40,15 +40,28 @@ function qandaQuestion(selector) {
     _self.selector = selector;
     _self.element = document.querySelector(selector);
     _self.questionType = ['1: Rating', '2: Text Feedbacks', '3: Multiple Choice'];
+    _self.questionStyleNum = ['1: pink', '2: lightblue', '3: lightgreen', '4: lightgreen'];
 
-    _self.listQuestionType = function(){
+    _self.listQuestionTypes = function(){
         console.log('Types of Questions listed below:')
         for(let i = 0; i < this.questionType.length; i++){
             console.log(this.questionType[i]);
         }
     }
 
+    _self.listQuestionStyles = function(){
+        console.log('Styles of Questions listed below:')
+        for(let i = 0; i < this.questionStyleNum.length; i++){
+            console.log(this.questionStyleNum[i]);
+        }
+    }
+
     _self.addQuestion = function(questionText, questionType, questionStyle){
+        const questionSection = document.createElement('div');
+        const questionParagraph = document.createElement('p');
+        const questionTxt = document.createTextNode(questionText);
+        questionParagraph.appendChild(questionTxt);
+        questionSection.appendChild(questionParagraph);
 
     }
 

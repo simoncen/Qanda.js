@@ -9,4 +9,5 @@ mySurveyTitle.addTitle('Engineering Midterm Survey', 1);
 
 const questions = qandaQuestion('#body');
 
-questions.listQuestionType();
+questions.listQuestionTypes();
+questions.listQuestionStyles();
