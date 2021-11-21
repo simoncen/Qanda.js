@@ -9,11 +9,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, '/pub')));
 
 app.get('/', (req, res) => {
-	// sending a string
-	//res.send('This should be the root route!')
-
-	//sending some HTML
-	res.send('<h1>Running backend...</h1>')
+	res.sendFile(path.join(__dirname, '/pub/example.html'))
 })
 
 // Error codes
