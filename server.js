@@ -16,6 +16,11 @@ app.get('/', (req, res) => {
 	res.send('<h1>Running backend...</h1>')
 })
 
+// Error codes
+app.get('/problem', (req, res) => {
+	res.status(500).send('There was a problem on the server')
+})
+
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
     console.log(`Listening on port ${port}...`);
