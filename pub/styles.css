@@ -47,22 +47,27 @@ main{
 
 h1{
     color: orange;
+    font-family: Stencil Std, fantasy;
 }
 
 h2{
     margin-left: 5%;
+    color: orange;
 }
 
 #exampleTitle{
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 #exampleBody{
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 #exampleSubmission{
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 #homeP{
@@ -76,10 +81,12 @@ h2{
 }
 
 footer{
-    position:absolute;
     bottom:0;
     width:100%;
     text-align:center;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: fixed
 }
 
 .headerQ{
