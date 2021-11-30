@@ -1,0 +1,134 @@
+header{
+    background-color: orange;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    top: 0;
+    position: relative;
+}
+
+#aniheader{
+    background-color: orange;
+    animation-name: ani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+body{
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    margin: auto;
+}
+
+#anibody{
+    background-color: bisque;
+    animation-name: ani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ani{
+    0% { background-color: bisque; }
+    20% { background-color: white;}
+    40% { background-color: lightgoldenrodyellow;}
+    60% { background-color: lightgray;} 
+    80% { background-color: lightcyan;}
+    100% { background-color: bisque; }
+}
+
+main{
+    margin-left: 0%;
+    width:100%;
+}
+
+.examplePage{
+    background-color: rgba(238, 228, 228, 0.911);
+    padding: 7px;
+}
+
+h1{
+    color: orange;
+}
+
+h2{
+    margin-left: 5%;
+}
+
+#exampleTitle{
+    margin-left: 5%;
+}
+
+#exampleBody{
+    margin-left: 5%;
+}
+
+#exampleSubmission{
+    margin-left: 5%;
+}
+
+#homeP{
+    color: rgb(182, 100, 0);
+    font-family: Blippo, fantasy;
+}
+
+#homeH{
+    font-family: Chalkduster, fantasy;
+    font-size: 100px;
+}
+
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align:center;
+}
+
+.headerQ{
+    position:absolute;
+    width:100%;
+    text-align:center;
+    margin-top: 17%;
+}
+
+/*  hyperlink */
+a:link, a:visited{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+nav{
+    font-size: 1.2em;
+}
+
+nav>ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    float:right;
+    margin-right: 3%;
+    font-family: Stencil Std, fantasy;
+}
+
+nav>ul>li{
+    margin-left: 1em;
+}
+
+nav>ul>li>a:link, nav>ul>li>a:visited, h2>a:link, h2>a:visited{
+    color: rgba(255, 255, 255, 0.767);
+    font-weight: lighter;
+}
+
+nav>ul>li>a:hover, h1>a:hover{
+    color:white;
+    font-size: larger;
+}
+
+.selected>a:link{
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+}
+
