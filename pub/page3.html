@@ -23,30 +23,248 @@
         </header>
 
         <main>
-            <h1 style="margin-left: 5%; font-weight: bold; font-size: 40px">Example Survery Form Created by Qanda.js: </h2>
+            <h1 style="margin-left: 5%; font-weight: bold; font-size: 40px">Getting Started</h2>
 
             <div class="examplePage">
                 <div>
-                    <h1 style = "margin-left: 5%; margin-right: 5%;">Title Section:</h1>
-                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: bold;">A variety of styling is given for the title of the survery.</p>
-                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: bold;">To checkout and edit the different styles, please check out the <a style="color: rgb(117, 82, 6);" href="page3.html">Documentation</a> page.</p>
+                    <h1 style = "margin-left: 5%; margin-right: 5%;">Setting up:</h1>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: bold;">Users need to include the script for both jQuery and Qanda.js before their own script in the head tag of the html file.</p>
                 </div>
-                <div id="exampleTitle" style = "background-color: white; padding: 10px"></div>
-                <br/>
+
+                <div style = "background-color: white; padding: 10px; margin-left: 5%; margin-right: 5%;">
+                    <pre style = "margin-left: 0%;">
+&lthead>
+    &ltscript defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">&lt/script>
+    &ltscript defer type="text/javascript" src='qanda.js'>&lt/script>
+    &ltscript defer type="text/javascript" src='yourCode.js'>&lt/script>
+&lt/head>
+                    </pre>
+                </div>
+                <br>
+                <hr>
                 <div>
-                    <h1 style = "margin-left: 5%; margin-right: 5%;">Body Section:</h1>
-                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: bold;">Different question types and styling is offered for the main content of the survey.</p>
-                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: bold;">To checkout and edit the styles and question types, please check out the <a style="color: rgb(117, 82, 6);" href="page3.html">Documentation</a> page.</p>
+                    <h1 style = "margin-left: 5%; margin-right: 5%;">Code Snippet:</h1>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: bold;">Code snipet for some basic functionality you can write in your own javascript files.</p>
                 </div>
-                <div id="exampleBody" style = "background-color: white; padding: 10px"></div>
-                <br/>
-                <br/>
+
+                <div style = "background-color: white; padding: 10px; margin-left: 5%; margin-right: 5%;">
+                    <pre style = "margin-left: 0%;">
+//1.
+const questions = new qandaQuestion();
+//2.
+questions.addQuestion('Are you satisfy with your scores?', 1, 1); 
+//3.
+questions.addUserResponse(1);
+
+//4.
+questions.addQuestion('Which year are you in?', 3, 4);
+//5.
+questions.removeOptionArr();
+questions.removeOptionArr();
+//6.
+questions.addUserResponse(2);
+//7.
+questions.firstMultipleChoice(2, 'first year')
+questions.secondMultipleChoice(2, 'second year');
+questions.thirdMultipleChoice(2, 'third year')
+                    </pre>
+                </div>
+
                 <div>
-                    <h1 style = "margin-left: 5%; margin-right: 5%;">Submission Section:</h1>
-                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: bold;">A variety of styling is given for the submission button of the survery.</p>
-                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: bold;">To checkout the different styles and edit the given styles, please check out the <a style="color: rgb(117, 82, 6);" href="page3.html">Documentation</a> page.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">1: Create the qandaQuestion object. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">2: Set the first question with the input text, specific type of question, and specific styling.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">3: Set the response for the users regarding the first question.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">4: Set the second question with the input text, specific type of question, and specific styling.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">5: Remove two multiple choice options for this response.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">6: Set the response for the users regarding the second question.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">7: Set each of the options in the multiple choice reponse with the input text regarding the second question.</p>
                 </div>
-                <div id="exampleSubmission" style = "background-color: white; padding: 10px"></div>
+                <br>
+                <hr>
+                <div>
+                    <h1 style = "margin-left: 5%; margin-right: 5%;">APIs:</h1>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: bold;">Object creations from the library, accessible functions using the objects, and global variables.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: orange; font-weight: bold;">Objects:</p>
+                </div>
+
+                <div style = "background-color: white; padding: 10px; margin-left: 5%; margin-right: 5%;">
+                    <pre style = "margin-left: 0%;">
+//1.
+const title = new qandatitle();
+//2.
+const questions = new qandaQuestion();
+//3.
+const button = new qandasubmit();
+                    </pre>
+                </div>
+
+                <div>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">1: The title object. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">2: The body(question) object.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">3: The submission object.</p>
+                </div>
+
+                <p style = "margin-left: 5%; margin-right: 5%; color: orange; font-weight: bold;">Title Object functions:</p>
+                
+
+                <div style = "background-color: white; padding: 10px; margin-left: 5%; margin-right: 5%;">
+                    <pre style = "margin-left: 0%;">
+//1.
+title.listStyles();     // parameters: N/A ; return type: Array of Strings on the console
+//2.
+title.addTitle(surveyTitle, numberOfTheStyling);     // parameters: String, Number ; return type: void
+//3.
+title.getTotalTitles();     //  parameters: N/A ; return type: Number
+                    </pre>
+                </div>
+
+                <div>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">1: List out all the styling for the title offered by Qanda.js with numbers in their front which the developers can refer to when they are using the styles on the console . </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">2: Create the title on the DOM by passing in a String of title text and the number referring to which styling the developer is planning to use by using the function described above.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">3: Return the number of titles the developer has created.</p>
+                </div>
+
+                <p style = "margin-left: 5%; margin-right: 5%; color: orange; font-weight: bold;">Title Object Global Variables</p>
+                
+                <div style = "background-color: white; padding: 10px; margin-left: 5%; margin-right: 5%;">
+                    <pre style = "margin-left: 0%;">
+Access by: title.nameOfTheVariable
+
+//1.
+titles     // return type: Array Objects
+//2.
+styleArrNum     // return type: Array of  Strings
+//3.
+styleArr     // return type: Array of Strings
+                    </pre>
+                </div>
+
+                <div>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">All these global variables for the objected can be manipulated by the developers.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">1: Refer to the number of title objects the developer has created. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">2: Refer to to the options of styling the developer can choose from.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">3: Refer to the title stylings provided by Qanda.js.</p>
+                </div>
+
+                <p style = "margin-left: 5%; margin-right: 5%; color: orange; font-weight: bold;">Body Object functions:</p>
+                
+
+                <div style = "background-color: white; padding: 10px; margin-left: 5%; margin-right: 5%;">
+                    <pre style = "margin-left: 0%;">
+//1.
+questions.listQuestionTypes();     // parameters: N/A ; return type: Array of Strings on the console
+//2.
+questions.listQuestionsStyles();     // parameters: N/A ; return type: Array of Strings on the console
+//3.
+questions.addQuestion(quesitonText, numberOfQuestionResponseType, numberOfTheStyling);     // parameters: String, Number, Number ; return type: String on the console
+//4.
+questions.deleteQuestion();     // parameters: N/A ; return type: Array of Strings on the console
+//5.
+questions.addUserResponse(quesitonNumber);     // parameters: Number ; return type: String on the console
+//6.
+questions.firstMultipleChoice(questionNumber, mcOptionText);     // parameters: Number, String ; return type: void
+//7.
+questions.secondMultipleChoice(questionNumber, mcOptionText);     // parameters: Number, String ; return type: void
+//8.
+questions.thirdMultipleChoice(questionNumber, mcOptionText);     // parameters: Number, String ; return type: void
+//9.
+questions.forthMultipleChoice(questionNumber, mcOptionText);     // parameters: Number, String ; return type: void
+//10.
+questions.fifthMultipleChoice(questionNumber, mcOptionText);     // parameters: Number, String ; return type: void
+//11.
+questions.getTotalQuestion();     // parameters: N/A; return type: Number
+//12.
+questions.addOptionArr();     // parameters: N/A; return type: String on the console
+//13.
+questions.removeOptionArr();     // parameters: N/A; return type: String on the console
+                    </pre>
+                </div>
+
+                <div>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">1: List out all the response types of the question which the developers can choose from according to the numbers in the front. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">2: List out all the styling of the question which the developers can choose from according to the numbers in the front. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">3: Add the question which the developer defines by the input text, response type, and styling option to the DOM. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">4: Delete the last question which the developer defines on the DOM. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">5: Add the response to the specific question on the DOM which is indicated by the number of the question from the input. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">6: Place in the text in the first option A according to the question number indicated by the developer. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">7: Place in the text in the second option A according to the question number indicated by the developer. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">8: Place in the text in the third option A according to the question number indicated by the developer. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">9: Place in the text in the forth option A according to the question number indicated by the developer. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">10: Place in the text in the fifth option A according to the question number indicated by the developer. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">11: Return the total number of questions which the developer has created. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">12: Increase the number of options for the multiple choice questions which the developer is going to create next(Upper limit of MC is 5). </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">13: Reduce the number of options for the multiple choice questions which the developer is going to create next(Lower limit of MC is 1).</p>
+                </div>
+
+                <p style = "margin-left: 5%; margin-right: 5%; color: orange; font-weight: bold;">Body Object Global Variables:</p>
+                
+
+                <div style = "background-color: white; padding: 10px; margin-left: 5%; margin-right: 5%;">
+                    <pre style = "margin-left: 0%;">
+Access by: questions.nameOfTheVariable
+                      
+//1.
+qs     // return type: Array of Objects
+//2.
+questions     // return type: Array of Strings
+//3.
+questionStyleNumber     // return type: Array of Strings
+//4.
+styleArr     // return type: Array of Strings
+                    </pre>
+                </div>
+
+                <div>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">All these global variables for the objected can be manipulated by the developers.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">1: Refer to the number of questinos objects the developer has created.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">2: Refer to the array of questions created by the developer.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">3: Refer to to the options of styling the developer can choose from.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">4: Refer to the question stylings provided by Qanda.js.</p>
+                </div>
+
+                <p style = "margin-left: 5%; margin-right: 5%; color: orange; font-weight: bold;">Submission Object functions:</p>
+                
+
+                <div style = "background-color: white; padding: 10px; margin-left: 5%; margin-right: 5%;">
+                    <pre style = "margin-left: 0%;">
+//1.
+button.listStyles();     // parameters: N/A ; return type: Array of Strings on the console
+//2.
+button.addButton(textInsideTheButton, numberOfTheStyling);     // parameters: String, Number; return type: void
+//3.
+button.getTotalSubmissionButtons();     // parameters: N/A ; return type: Number
+                    </pre>
+                </div>
+
+                <div>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">1: List out all the styling of the button which the developers can choose from according to the numbers in the front. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">2: Add the button to the DOM with the text input and the styling indicated by the developer.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">3: Return the total number of buttons which the developer has created.</p>
+                </div>
+
+                <p style = "margin-left: 5%; margin-right: 5%; color: orange; font-weight: bold;">Submission Object Global Variables:</p>
+                
+
+                <div style = "background-color: white; padding: 10px; margin-left: 5%; margin-right: 5%;">
+                    <pre style = "margin-left: 0%;">
+Access by: button.nameOfTheVariable
+
+//1.
+submit     // return type: Array of Objects
+//2.
+styleArrNum     // return type: Array of Strings
+//3.
+styleArr     // return type: Array of Strings
+                    </pre>
+                </div>
+
+                <div>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">All these global variables for the objected can be manipulated by the developers.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">1: Refer to the number of submission button objects the developer has created. </p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">2: Refer to to the options of styling the developer can choose from.</p>
+                    <p style = "margin-left: 5%; margin-right: 5%; color: rgb(168, 119, 27); font-weight: normal;">3: Refer to the button stylings provided by Qanda.js.</p>
+                </div>
+
                 <div style="text-align: center;">
                     <p>
                         <a href="https://github.com/simoncen" target="_blank" rel="noreferrer">
@@ -56,6 +274,7 @@
                     </p>
                     <p>Created by <a href="http://simoncen.ca" target="_blank" rel="noreferrer">Jinlin Simon Cen</a> @ 2021</p>
                 </div>
+
             </div>
         </main>
     </body>

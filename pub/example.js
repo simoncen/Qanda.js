@@ -23,7 +23,7 @@ questions.addUserResponse(1);
 
 
 // question 2:
-questions.addQuestion('How would you rate the difficulties of your exams?', 2, 2);
+questions.addQuestion('What are your thoughts on your exams?', 2, 2);
 // create the the response for the second question, which is in the form of text box
 questions.addUserResponse(2);
 
@@ -42,7 +42,7 @@ questions.fifthMultipleChoice(3, 'Choose not to answer')
 
 
 // question 4:
-questions.addQuestion('Which type of exam would you prefer?', 3, 4);
+questions.addQuestion('Which year are you in?', 3, 4);
 // create the reponse for the forth question, which is in the form of mulitple choice
 questions.removeOptionArr();
 questions.removeOptionArr();
